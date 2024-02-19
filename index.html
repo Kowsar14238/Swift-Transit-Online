@@ -124,18 +124,21 @@
         <!-- Ticket Booking Section Start-->
         <section class="bg-[#F7F8F8] border-2 border-[#1DD100] rounded-t-[88px]	flex flex-col justify-center items-center">
 
-          <div>
+          <div class="px-28 w-full ">
 
-            <div>
+            <!-- Ticket Booking Section Head Start-->
+            <div class="flex flex-col justify-center items-center text-center mt-16">
+              <h1 class="text-4xl	font-bold text-[#030712]">Swift Transit</h1>
+              <p class="text-[#03071298] my-3">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+            </div>
+            <!-- Ticket Booking Section Head Start-->
 
-              <div class="flex flex-col justify-center items-center w-[70%] text-center mt-16">
-                <h1 class="text-4xl	font-bold text-[#030712]">Swift Transit</h1>
-                <p class="text-[#03071298] my-3">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
-              </div>
+            <!-- Ticket Information Card Start-->
+            <div class="bg-white flex flex-row w-full items-center">
 
-              <div>
+              <div class="my-5 mx-12 basis-2/3" >
     
-                <div class="flex flex-row ">
+                <div class="flex flex-row justify-between">
                   <div class="flex flex-row gap-2">
                     <img src="./images/bus-logo.png" alt="">
                     <div class="flex flex-col">
@@ -143,82 +146,115 @@
                       <p>Coach-009-WEB ! AC_Business</p>
                     </div>
                   </div>
-                  <div class="flex float-end">
+                  <div class="flex gap-2">
                     <img src="./images/seat-green-filled.png" alt="">
-                    <p><span>40</span> Seats left</p>
+                    <p class="w-full"><span>40</span> Seats left</p>
                   </div>
                 </div>
     
-                <div>
-                  <table class="">
-                    <tbody>
-                      <tr>
-                        <td>Route</td>
-                        <td></td>
-                        <td>Dhaka - Sylhet</td>
-                      </tr>
-                      <tr>
-                        <td>Departure Time</td>
-                        <td></td>
-                        <td>9:00 PM</td>
-                      </tr>
-                      <tr>
-                        <td><button>Boarding Point - Laxmipur</button></td>
-                        <td><button>Dropping Point - Bogura</button></td>
-                        <td><button>Est. Time - 11 Hour</button></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="bg-[#F7F8F8] my-8 rounded-lg py-4 px-10">
+
+                  <div class="flex flex-row justify-between my-4">
+                    <p>Route</p>
+                    <p>Dhaka - Sylhet</p>
+                  </div>
+                  <hr>
+
+                  <div class="flex flex-row justify-between my-4">
+                    <p>Departure Time</p>
+                    <p>9:00 PM</p>
+                  </div>
+                  <hr>
+
+                  <div class="flex flex-row justify-between my-4">
+                    <button class="btn no-animation">Boarding Point - Laxmipur</button>
+                    <button class="btn no-animation">Dropping Point - Bogura</button>
+                    <button class="btn no-animation">Est. Time - 11 Hour</button>
+                  </div>
+                  
                 </div>
               </div>
 
-            <div>
-              
+            <div class="divider h-full">
+              <img src="./images/info-devider.png" alt="">
             </div>
-              <img src="" alt="">
-              <h2>550 Taka</h2>
+
+            <div>
+              <img src="./images/fare.png" alt="">
+              <h2 class="font-bold">550 Taka</h2>
               <p>Per Seat</p>
             </div>
           </div>
+          <!-- Ticket Information Card End-->
 
-          <div>
+          <!-- Bus Seat Booking Part -->
+          <div class="bg-[#FFFFFF] my-5 p-5 rounded-lg grid grid-flow-col justify-normal gap-5">
+            <!-- Bus Seat Plan -->
             <div>
-              <h1>Select Your Seat</h1>
+              <h1 class="font-bold my-2">Select Your Seat</h1>
               <hr>
-              <div>
-                <div>
+              <div class="flex flex-row justify-between my-2">
+                <div class="flex flex-row gap-2">
                   <img src="./images/seat-gray.png" alt="">
                   <p>Available</p>
                 </div>
-                <div>
+                <div class="flex flex-row gap-2">
                   <img src="./images/seat-green-filled.png" alt="">
                   <p>Selected</p>
                 </div>
               </div>
               <hr>
 
-              <div>
-                <img src="./images/steering-wheel.png" alt="">
+              <div class="flex flex-row justify-end my-3">
+                <img class=" bg-[#03071232] py-1 px-5 rounded-lg" src="./images/steering-wheel.png" alt="">
               </div>
 
-              <div>
+              <div class="flex flex-row">
         
-                <div>
+                <div class="flex flex-col">
                   <p>A</p>
                   <p>B</p>
                   <p>C</p>
                   <p>D</p>
-                  <p>E</p>
+                  <!-- <p>E</p>
                   <p>F</p>
                   <p>G</p>
                   <p>H</p>
                   <p>I</p>
-                  <p>J</p>
+                  <p>J</p> -->
                 </div>
 
-                <div>
-
-                  <div>
+                <div class="flex flex-col">
+                  <div class=" flex flex-row ">
+                    <p><a href=""> A1</a></p>
+                    <p><a href=""> A2</a></p>
+                    <p><a href=""> A3</a></p>
+                    <p><a href=""> A4</a></p>
+                  </div>
+                  
+                  <div class=" flex flex-row ">
+                    <p><a href=""> B1</a></p>
+                    <p><a href=""> B2</a></p>
+                    <p><a href=""> B3</a></p>
+                    <p><a href=""> B4</a></p>
+                  </div>
+                  
+                  <div class=" flex flex-row ">
+                    <p><a href=""> C1</a></p>
+                    <p><a href=""> C2</a></p>
+                    <p><a href=""> C3</a></p>
+                    <p><a href=""> C4</a></p>
+                  </div>
+                  
+                  <div class=" flex flex-row ">
+                    <p><a href=""> D1</a></p>
+                    <p><a href=""> D2</a></p>
+                    <p><a href=""> D3</a></p>
+                    <p><a href=""> D4</a></p>
+                  </div>
+                  
+                </div>
+                  <!-- <div class="flex">
                     <p><a href=""> A1</a></p>
                     <p><a href=""> A2</a></p>
                     <p><a href=""> B1</a></p>
@@ -238,7 +274,7 @@
                     <p><a href=""> I1</a></p>
                     <p><a href=""> I2</a></p>
                     <p><a href=""> J1</a></p>
-                    <p> J2</p>
+                    <p><a href=""> J2</a></p>
                   </div>
 
                   <div>
@@ -263,21 +299,23 @@
                     <p><a href=""> J3</a></p>
                     <p><a href=""> J4</a></p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
+            <!-- Bus Seat Plan -->
 
-            <div>
-              <h1>Select Your Seat</h1>
+            <!-- Bus Seat Booking Information Part -->
+            <div class="">
+              <h1 class="font-bold my-2">Select Your Seat</h1>
               <hr>
 
-              <div>
+              <div class="bg-[#F7F8F8] my-2 p-5 rounded-xl">
                 <table>
                   <th>
                     <td>
                       <div class="indicator">
                         <span class="indicator-item badge badge-secondary">99+</span> 
-                        <button class="btn">inbox</button>
+                        <button class="btn">seat</button>
                       </div>
                     </td>
                     <td>Class</td>
@@ -294,7 +332,7 @@
                   <h2>Total Price</h2>
                   <span></span>
                 </div>
-                <div>
+                <div class="flex flex-row">
                   <label class="form-control w-full max-w-xs">
                     <input type="text" placeholder="Have any copupon?" class="input input-bordered w-full max-w-xs" />
                   </label>
@@ -333,6 +371,7 @@
                 <a href="">Cancellation Policy</a>
               </div>
             </div>
+            <!-- Bus Seat Booking Information Part -->
           </div>
         </section>
         <!-- Ticket Booking Section End-->
