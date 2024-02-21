@@ -146,9 +146,9 @@
                       <p>Coach-009-WEB ! AC_Business</p>
                     </div>
                   </div>
-                  <div class="flex gap-2">
+                  <div class="flex fle-row items-center justify-center bg-[#1cd10026] text-center px-3 rounded-xl text-[#1DD100] gap-2">
                     <img src="./images/seat-green-filled.png" alt="">
-                    <p class="w-full"><span id="seatsLeft">40</span> Seats left</p>
+                    <p class="w-full "><span id="seatsLeft">40</span> Seats left</p>
                   </div>
                 </div>
     
@@ -211,6 +211,7 @@
                 </button>
               </div>
 
+              <!-- Seat Serial Start -->
               <div class="flex flex-row">
         
                 <div class="flex flex-col basis-1/12 my-2">
@@ -349,8 +350,8 @@
                   </div>
                   
                 </div>
-                
               </div>
+                <!-- Seat Serial End -->
             </div>
             <!-- Bus Seat Plan -->
 
@@ -367,7 +368,7 @@
 
                   <div class="indicator">
                     <button class="btn  font-bold">Seat</button>
-                    <span class="indicator-item badge badge-secondary bg-[#1DD100] border-[#1DD100]">0</span> 
+                    <span id="BookingSeatCount" class="indicator-item badge badge-secondary bg-[#1DD100] border-[#1DD100]">0</span> 
                   </div>
                   <p class=" font-bold">Class</p>
                   <p class=" font-bold">Price</p>
@@ -419,9 +420,6 @@
                   </div>
                   
                   <div class="flex items-start mb-5">
-                    <div class="flex items-center h-5">
-                      <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
-                    </div>
                     <label for="terms" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
                   </div>
                   <button type="submit" onclick="goToSuccessCard()" class="text-white bg-[#1DD100] w-full hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#1DD100] dark:hover:bg-blue-700 dark:focus:ring-blue-800 " >Next</button>
@@ -471,6 +469,7 @@
     <script src="./scripts/priceCalculate.js"></script>
     <script src="./scripts/convertToIntValue.js"></script>
     <script src="./scripts/pageChange.js"></script>
+    <script src="./scripts/seatCount.js"></script>
     
 </body>
 </html>

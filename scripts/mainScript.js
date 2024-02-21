@@ -3,11 +3,19 @@ const allSeat = document.getElementsByClassName("selectSeat");
 
 for(const seat of allSeat){
     seat.addEventListener("click", function(event){
-        const seatNumber = event.target.querySelector('span').innerText; // Extract the text content
-        // console.log(seatNumber);
+        
+        // Check if seat selection is allowed
+        if (!updateSeatCount()) {
+            return; // Stop further execution
+        }
 
-        const selectSeatContainer = document.querySelector(".selectSeatTable"); // Select by class
+        const seatNumber = event.target.querySelector('span').innerText;
+        // console.log(seatNumber);
+        const selectSeatContainer = document.querySelector(".selectSeatTable");
         const price = 550;
+
+        //After select the seat
+        event.target.setAttribute("disabled", false);
 
         //Add seat details to the booking list start
         const div = document.createElement("div");
@@ -28,7 +36,7 @@ for(const seat of allSeat){
 
         selectSeatContainer.appendChild(div);
         //Add seat details to the booking list End
-        
+
         updateTotalPrice(price);
         updateGrandTotalPrice();
     });
