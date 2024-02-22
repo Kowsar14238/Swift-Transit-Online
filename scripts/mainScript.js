@@ -8,7 +8,7 @@ for(const seat of allSeat){
         if (!updateSeatCount()) {
             return; // Stop further execution
         }
-
+        
         const seatNumber = event.target.querySelector('span').innerText;
         // console.log(seatNumber);
         const selectSeatContainer = document.querySelector(".selectSeatTable");

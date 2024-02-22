@@ -13,6 +13,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
+    <style>
+    </style>
 
 </head>
 <body>
@@ -24,17 +26,17 @@
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Home</a></li>
+                  <li><a href="./index.html">Home</a></li>
                   <li><a>About</a></li>
                   <li><a>Destination</a></li>
                   <li><a>Search</a></li>
                 </ul>
               </div>
-              <a class="btn btn-ghost lg:text-3xl text-l font-bold">Swift Transit</a>
+              <a href="./index.html" class="btn btn-ghost lg:text-3xl text-l font-bold">Swift Transit</a>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
-                <li><a>Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                   <li><a>About</a></li>
                   <li><a>Destination</a></li>
                   <li><a>Search</a></li>
@@ -58,7 +60,7 @@
 
                         <h1 class="lg:text-5xl	font-bold leading-snug sm:text-text-xs">End-to-End Travel with <br><span class="text-[#1DD100]">Swift Transit</span></h1>
                         <p class="sm:text-xs">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                        <button class="btn btn-primary lg:my-5 ">Buy Now</button>
+                        <button class="btn btn-primary lg:my-5 "><a href="#seatBookingPlan">Buy Now</a></button>
 
 
                     </div>
@@ -124,7 +126,7 @@
         <!-- Ticket Booking Section Start-->
         <section class="bg-[#F7F8F8] border-2 border-t-[#1DD100] rounded-t-[88px] mb-20	flex flex-col justify-center items-center">
 
-          <div class="px-28 w-full ">
+          <div id="seatBookingPlan" class="px-28 w-full ">
 
             <!-- Ticket Booking Section Head Start-->
             <div class="flex flex-col justify-center items-center text-center mt-16">
@@ -385,11 +387,15 @@
                   </div>
                 </div>
 
-                <div class="flex flex-row my-3">
-                  <label class="form-control w-full max-w-xs">
+                <div class="flex flex-row my-3 w-full">
+                  <label class="input input-bordered flex items-center gap-2">
+                    <input type="text" class="grow input input-bordered w-full max-w-xs border-none" placeholder="Have any copupon?" />
+                    <span class="badge badge-info btn btn-accent bg-[#1DD100] text-white">Apply</span>
+                  </label>
+                  <!-- <label class="form-control w-full max-w-xs">
                     <input id="couponCode" type="text" placeholder="Have any copupon?" class="input input-bordered w-full max-w-xs border-none" />
                   </label>
-                  <button onclick="updateGrandTotalPrice('apply-btn')" class="btn btn-accent bg-[#1DD100] text-white">Apply</button>
+                  <button onclick="updateGrandTotalPrice('apply-btn')" class="btn btn-accent bg-[#1DD100] text-white">Apply</button> -->
                 </div>
 
                 <div class="grid grid-flow-col">
@@ -419,19 +425,44 @@
                     <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter your email id" />
                   </div>
                   
-                  <div class="flex items-start mb-5">
-                    <label for="terms" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+                  <div class="flex justify-center mb-5 ">
+                    <label for="terms" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 "><a href="#" class="text-blue-600 hover:underline dark:text-blue-500 ">Terms and Conditions</a></label>
                   </div>
-                  <button type="submit" onclick="goToSuccessCard()" class="text-white bg-[#1DD100] w-full hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#1DD100] dark:hover:bg-blue-700 dark:focus:ring-blue-800 " >Next</button>
+                  <button type="submit" onclick="successCard.showModal()" class="text-white bg-[#1DD100] w-full hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#1DD100] dark:hover:bg-blue-700 dark:focus:ring-blue-800 " >Next</button>
                 </form>
               </div>
               <!-- Customer Information Booking Form End-->
+              <dialog id="successCard" class="modal">
+                <div class="modal-box">
+                  <div class="flex flex-col justify-center items-center text-center">
+                    <div class="flex flex-col justify-center items-center gap-3 my-4">
+                      <img src="./images/success.png" alt="">
+                      <p class="text-[#27AE60] font-bold">SUCCESS</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center text-center w-[70%]">
+                      <p class="font-bold my-2">
+                          Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you. 
+                      </p>
+                      <p class="text-[#4A4A4A] mb-4">
+                          Shortly you will find a confirmation in your email.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="modal-action flex-row justify-center items-center">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn btn-wide  bg-[#27AE60] rounded-full text-white">Continue</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
             </div>
             <!-- Bus Seat Booking Information Part End-->
           </div>
         </section>
         <!-- Ticket Booking Section End-->
 
+        
     </main>
         
     <footer class="bg-white shadow dark:bg-gray-900 mt-4">
